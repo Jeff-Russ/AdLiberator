@@ -1,150 +1,76 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="AdLiberator : A VST/AU instrument using the DOSBox OPL2 emulation">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>JuceOPLVSTi by bsutherland</title>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
-      ga('create', 'UA-45526852-1', 'bsutherland.github.io');
-      ga('send', 'pageview');
-    
-    </script>
-
+    <title>AdLiberator</title>
   </head>
 
   <body>
 
-    <header>
-      <div class="container">
-        <h1>JuceOPLVSTi</h1>
-        <h2>A VST instrument using the DOSBox OPL2 emulation</h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Jeff-Russ/AdLiberator">View on GitHub</a>
 
-        <section id="downloads">
-          <a href="https://github.com/bsutherland/JuceOPLVSTi" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+          <h1 id="project_title">AdLiberator</h1>
+          <h2 id="project_tagline">A VST/AU instrument using the DOSBox OPL2 emulation</h2>
 
-    <div class="container">
-      <section id="main_content">
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Jeff-Russ/AdLiberator/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Jeff-Russ/AdLiberator/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h2>
-<a name="download-binaries" class="anchor" href="#download-binaries"><span class="octicon octicon-link"></span></a>Download binaries</h2>
+<a id="download-binaries" class="anchor" href="#download-binaries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download binaries</h2>
 
 <h3>
-<a name="0111" class="anchor" href="#0111"><span class="octicon octicon-link"></span></a>0.11.1</h3>
-<p><a href="https://github.com/bsutherland/JuceOPLVSTi/releases/download/0.11.1/JuceOPLVSTi_x64.zip">Windows VST (64-bit DLL + instruments)</a></p>
-<p><a href="https://github.com/bsutherland/JuceOPLVSTi/releases/download/0.11.1/JuceOPLVSTi_win32.dll">Windows VST (32-bit DLL)</a></p>
-<p>
-Bug fixes and features.
-  <ul>
-    <li>GUI too large for moderate screen resolution</li>
-    <li>Support percussion</li>
-    <li>Show envelope stage in channel usage display</li>
-    <li>Support writing to .DRO format (experimental)</li>
-  </ul>
-
-  <img src="https://raw.github.com/bsutherland/JuceOPLVSTi/gh-pages/images/screenshot_0-11-1.png" alt="Screenshot (0.11.1 release)">
-</p>
-
-<h3>
-<a name="0101" class="anchor" href="#0101"><span class="octicon octicon-link"></span></a>0.10.1</h3>
-
-<p><a href="https://github.com/bsutherland/JuceOPLVSTi/releases/download/0.10.1/0.10.1.zip">Windows VST (64-bit DLL)</a></p>
-<p>
-Bug fixes and features.
-  <ul>
-    <li>Added ZDoom emulator. Emulator is now selectable.</li>
-    <li><em>Increased output amplitude by approximately 8 times (about 9 dB).</em></li>
-    <li>Changed buffering scheme for DOSBox output as an attempt to solve noise issues on some VST hosts.</li>
-    <li>Tested under Windows 7 x64:
-      <ul>
-        <li>Renoise 2.8.0 x64</li>
-        <li>FL Studio 11.1 x86 (trial version)</li>
-        <li>Ableton Live 9.1.5 64-bit (trial version)</li>
-      </ul>
-    </li>
-  </ul>
-
-</p>
-
-<h3>
-<a name="097" class="anchor" href="#096-beta"><span class="octicon octicon-link"></span></a>0.9.7</h3>
-
-<p><a href="https://github.com/bsutherland/JuceOPLVSTi/releases/download/0.9.7/0.9.7.zip">Windows VST (32-bit DLL)</a></p>
-<p><a href="https://github.com/bsutherland/JuceOPLVSTi/releases/download/0.9.7/JuceOPLVSTi.x64.dll">Windows VST (64-bit DLL)</a></p>
-<p>
-Bug fixes and features (thanks to Trylle!)
-  <ul>
-    <li>Workaround or Cubase.</li>
-    <li>Better channel re-use.</li>
-    <li>Channel use displayed in UI.</li>
-  </ul>
-  
-  <img src="https://raw.github.com/bsutherland/JuceOPLVSTi/gh-pages/images/0.9.7-screenshot.png" alt="Screenshot (0.9.7 release)">
-</p>
-
-<h3>
-<a name="096-beta" class="anchor" href="#096-beta"><span class="octicon octicon-link"></span></a>0.9.6 beta</h3>
-
-<p><a href="https://github.com/bsutherland/JuceOPLVSTi/releases/download/0.9.6-beta/0.9.6-beta.zip">Windows VST (32-bit DLL)</a></p>
-<p>
-  <ul>
-    <li>Supports loading of .sbi instrument files (drag and drop).</li>
-    <li>Hundreds of .sbi files included.</li>
-    <li>MIDI pitch wheel events supported.</li>
-    <li>Should now run under Windows XP.</li>
-  </ul>
-</p>
-
-<h3>
-<a name="095-beta" class="anchor" href="#095-beta"><span class="octicon octicon-link"></span></a>0.9.5 beta</h3>
-
-<p><a href="https://github.com/bsutherland/JuceOPLVSTi/releases/download/0.9.5-beta/JuceOPLVSTi.dll">Windows VST (32-bit DLL)</a></p>
-<p>Bugfixes, support for loading Creative Labs Sound Blaster Instrument format.</p>
-
-<h3>
-<a name="093-beta" class="anchor" href="#093-beta"><span class="octicon octicon-link"></span></a>0.9.3 beta</h3>
-
-<p><a href="https://github.com/bsutherland/JuceOPLVSTi/releases/download/0.9.3-beta/JuceOPLVSTi.dll">Windows VST (32-bit DLL)</a></p>
-
-<h3>
-<a name="09-beta" class="anchor" href="#09-beta"><span class="octicon octicon-link"></span></a>0.9 beta</h3>
+<a id="09-beta" class="anchor" href="#09-beta" aria-hidden="true"><span class="octicon octicon-link"></span></a>0.9 beta</h3>
 
 <p><a href="https://github.com/bsutherland/JuceOPLVSTi/releases/download/0.9-beta/JuceOPLVSTi.dll">Windows VST (32-bit DLL)</a></p>
 
 <h2>
-<a name="what-is-it" class="anchor" href="#what-is-it"><span class="octicon octicon-link"></span></a>What is it?</h2>
+<a id="what-is-it" class="anchor" href="#what-is-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is it?</h2>
 
 <p>The OPL2 is a simple 2-operator digital FM sound chip from the late 80s, used in PC sound cards like the Adlib and original Sound Blaster. This VST instrument allows you to program an emulated OPL2 chip.</p>
 
-<p><img src="https://raw.github.com/bsutherland/JuceOPLVSTi/gh-pages/images/screenshot_0-9-3_beta.png" alt="Screenshot (0.9.3 beta release)"></p>
+<p><img src="https://raw.github.com/bsutherland/JuceOPLVSTi/gh-pages/images/screenshot_0-9_beta.png" alt="Screenshot (beta release)"></p>
 
-<p><a href="http://www.youtube.com/watch?v=HI7U5XxTSW0">Demo on YouTube</a> (Early version with no UI, music from PC version of Syndicate, tracked in Renoise).</p>
+<p><a href="http://www.youtube.com/watch?v=HI7U5XxTSW0">Demo on YouTube</a> (music from PC version of Syndicate, tracked in Renoise).</p>
 
 <h2>
-<a name="source" class="anchor" href="#source"><span class="octicon octicon-link"></span></a>Source</h2>
+<a id="source" class="anchor" href="#source" aria-hidden="true"><span class="octicon octicon-link"></span></a>Source</h2>
 
 <p>GPL v2 licensed.</p>
 
 <p><a href="https://github.com/bsutherland/JuceOPLVSTi">https://github.com/bsutherland/JuceOPLVSTi</a></p>
 
 <h2>
-<a name="issues" class="anchor" href="#issues"><span class="octicon octicon-link"></span></a>Issues</h2>
+<a id="issues" class="anchor" href="#issues" aria-hidden="true"><span class="octicon octicon-link"></span></a>Issues</h2>
 
 <p><a href="https://github.com/bsutherland/JuceOPLVSTi/issues">https://github.com/bsutherland/JuceOPLVSTi/issues</a></p>
       </section>
     </div>
 
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">AdLiberator maintained by <a href="https://github.com/Jeff-Russ">Jeff-Russ</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
     
+
   </body>
 </html>
