@@ -1,5 +1,6 @@
 .DS_Store
-Builds
+Builds/VisualStudio2013
+Builds/MacOSX/build
 JuceLibraryCode/modules
 *.txt
 pdf
