@@ -7,8 +7,9 @@
               pluginIsSynth="1" pluginWantsMidiIn="1" pluginProducesMidiOut="0"
               pluginSilenceInIsSilenceOut="0" pluginEditorRequiresKeys="0"
               pluginAUExportPrefix="JuceOPLVSTiAU" pluginRTASCategory="" aaxIdentifier="com.plainweave.JuceOPLVSTi"
-              pluginAAXCategory="AAX_ePlugInCategory_Dynamics" jucerVersion="3.1.0"
-              buildVST3="0" buildRTAS="0" buildAAX="0" includeBinaryInAppConfig="1">
+              pluginAAXCategory="AAX_ePlugInCategory_Dynamics" jucerVersion="4.1.0"
+              buildVST3="0" buildRTAS="0" buildAAX="0" includeBinaryInAppConfig="1"
+              pluginIsMidiEffectPlugin="0">
   <MAINGROUP id="TOefyq" name="JuceOPLVSTi">
     <GROUP id="{DCA755EB-7953-0641-E719-95C7850E5B2B}" name="Source">
       <FILE id="o0sULY" name="DROMultiplexer.cpp" compile="1" resource="0"
@@ -101,5 +102,32 @@
         <MODULEPATH id="juce_video" path="../Juce/modules"/>
       </MODULEPATHS>
     </VS2013>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="1" optimisation="1" targetName="JuceOPLVSTi"/>
+        <CONFIGURATION name="Release" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="0" optimisation="3" targetName="JuceOPLVSTi"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_video" path="../Juce/modules"/>
+        <MODULEPATH id="juce_opengl" path="../Juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../Juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../Juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="../Juce/modules"/>
+        <MODULEPATH id="juce_events" path="../Juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../Juce/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../Juce/modules"/>
+        <MODULEPATH id="juce_core" path="../Juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../Juce/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../Juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../Juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../Juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../Juce/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
   </EXPORTFORMATS>
+  <LIVE_SETTINGS>
+    <OSX/>
+  </LIVE_SETTINGS>
 </JUCERPROJECT>

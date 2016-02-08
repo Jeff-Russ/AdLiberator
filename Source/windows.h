@@ -50,7 +50,8 @@ typedef uint16_t WORD;
 
 // BOOL  -  A boolean variable
 //          This type is declared in WinDef.h as follows:
-typedef BYTE BOOL;
+typedef signed char BOOL;
+// this should be typedef int BOOL; but that produces error
 
 DWORD GetStdHandle (DWORD handle) { return handle; }
 

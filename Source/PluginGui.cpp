@@ -7,12 +7,12 @@
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
   and re-saved.
 
-  Created with Introjucer version: 3.1.0
+  Created with Introjucer version: 4.1.0
 
   ------------------------------------------------------------------------------
 
   The Introjucer is part of the JUCE library - "Jules' Utility Class Extensions"
-  Copyright 2004-13 by Raw Material Software Ltd.
+  Copyright (c) 2015 - ROLI Ltd.
 
   ==============================================================================
 */
@@ -153,6 +153,9 @@ void PluginGui::setRecordButtonState(bool recording) {
 PluginGui::PluginGui (AdlibBlasterAudioProcessor* ownerFilter)
     : AudioProcessorEditor (ownerFilter)
 {
+    //[Constructor_pre] You can add your own custom stuff here..
+    //[/Constructor_pre]
+
     addAndMakeVisible (groupComponent = new GroupComponent ("new group",
                                                             TRANS("Modulator")));
     groupComponent->setTextLabelPosition (Justification::centredLeft);
@@ -162,7 +165,7 @@ PluginGui::PluginGui (AdlibBlasterAudioProcessor* ownerFilter)
     addAndMakeVisible (frequencyComboBox = new ComboBox ("frequency combo box"));
     frequencyComboBox->setEditableText (false);
     frequencyComboBox->setJustificationType (Justification::centredLeft);
-    frequencyComboBox->setTextWhenNothingSelected (String::empty);
+    frequencyComboBox->setTextWhenNothingSelected (String());
     frequencyComboBox->setTextWhenNoChoicesAvailable (TRANS("(no choices)"));
     frequencyComboBox->addListener (this);
 
@@ -391,7 +394,7 @@ PluginGui::PluginGui (AdlibBlasterAudioProcessor* ownerFilter)
     addAndMakeVisible (frequencyComboBox2 = new ComboBox ("frequency combo box"));
     frequencyComboBox2->setEditableText (false);
     frequencyComboBox2->setJustificationType (Justification::centredLeft);
-    frequencyComboBox2->setTextWhenNothingSelected (String::empty);
+    frequencyComboBox2->setTextWhenNothingSelected (String());
     frequencyComboBox2->setTextWhenNoChoicesAvailable (TRANS("(no choices)"));
     frequencyComboBox2->addListener (this);
 
@@ -690,7 +693,7 @@ PluginGui::PluginGui (AdlibBlasterAudioProcessor* ownerFilter)
     addAndMakeVisible (velocityComboBox = new ComboBox ("velocity combo box"));
     velocityComboBox->setEditableText (false);
     velocityComboBox->setJustificationType (Justification::centredLeft);
-    velocityComboBox->setTextWhenNothingSelected (String::empty);
+    velocityComboBox->setTextWhenNothingSelected (String());
     velocityComboBox->setTextWhenNoChoicesAvailable (TRANS("(no choices)"));
     velocityComboBox->addItem (TRANS("Off"), 1);
     velocityComboBox->addItem (TRANS("Light"), 2);
@@ -710,7 +713,7 @@ PluginGui::PluginGui (AdlibBlasterAudioProcessor* ownerFilter)
     addAndMakeVisible (velocityComboBox2 = new ComboBox ("velocity combo box"));
     velocityComboBox2->setEditableText (false);
     velocityComboBox2->setJustificationType (Justification::centredLeft);
-    velocityComboBox2->setTextWhenNothingSelected (String::empty);
+    velocityComboBox2->setTextWhenNothingSelected (String());
     velocityComboBox2->setTextWhenNoChoicesAvailable (TRANS("(no choices)"));
     velocityComboBox2->addItem (TRANS("Off"), 1);
     velocityComboBox2->addItem (TRANS("Light"), 2);
@@ -802,7 +805,7 @@ PluginGui::PluginGui (AdlibBlasterAudioProcessor* ownerFilter)
     addAndMakeVisible (algorithmComboBox = new ComboBox ("algorithm combo box"));
     algorithmComboBox->setEditableText (false);
     algorithmComboBox->setJustificationType (Justification::centredLeft);
-    algorithmComboBox->setTextWhenNothingSelected (String::empty);
+    algorithmComboBox->setTextWhenNothingSelected (String());
     algorithmComboBox->setTextWhenNoChoicesAvailable (TRANS("(no choices)"));
     algorithmComboBox->addItem (TRANS("FM"), 1);
     algorithmComboBox->addItem (TRANS("Additive"), 2);
@@ -831,7 +834,7 @@ PluginGui::PluginGui (AdlibBlasterAudioProcessor* ownerFilter)
     addAndMakeVisible (keyscaleAttenuationComboBox2 = new ComboBox ("keyscale combo box"));
     keyscaleAttenuationComboBox2->setEditableText (false);
     keyscaleAttenuationComboBox2->setJustificationType (Justification::centredLeft);
-    keyscaleAttenuationComboBox2->setTextWhenNothingSelected (String::empty);
+    keyscaleAttenuationComboBox2->setTextWhenNothingSelected (String());
     keyscaleAttenuationComboBox2->setTextWhenNoChoicesAvailable (TRANS("(no choices)"));
     keyscaleAttenuationComboBox2->addItem (TRANS("-0.0"), 1);
     keyscaleAttenuationComboBox2->addItem (TRANS("-3.0"), 2);
@@ -842,7 +845,7 @@ PluginGui::PluginGui (AdlibBlasterAudioProcessor* ownerFilter)
     addAndMakeVisible (keyscaleAttenuationComboBox = new ComboBox ("keyscale combo box"));
     keyscaleAttenuationComboBox->setEditableText (false);
     keyscaleAttenuationComboBox->setJustificationType (Justification::centredLeft);
-    keyscaleAttenuationComboBox->setTextWhenNothingSelected (String::empty);
+    keyscaleAttenuationComboBox->setTextWhenNothingSelected (String());
     keyscaleAttenuationComboBox->setTextWhenNoChoicesAvailable (TRANS("(no choices)"));
     keyscaleAttenuationComboBox->addItem (TRANS("-0.0"), 1);
     keyscaleAttenuationComboBox->addItem (TRANS("-3.0"), 2);
@@ -902,7 +905,7 @@ PluginGui::PluginGui (AdlibBlasterAudioProcessor* ownerFilter)
     addAndMakeVisible (percussionComboBox = new ComboBox ("percussion combo box"));
     percussionComboBox->setEditableText (false);
     percussionComboBox->setJustificationType (Justification::centredLeft);
-    percussionComboBox->setTextWhenNothingSelected (String::empty);
+    percussionComboBox->setTextWhenNothingSelected (String());
     percussionComboBox->setTextWhenNoChoicesAvailable (TRANS("(no choices)"));
     percussionComboBox->addItem (TRANS("Off"), 1);
     percussionComboBox->addItem (TRANS("Bass drum"), 2);
@@ -1924,8 +1927,8 @@ BEGIN_JUCER_METADATA
   <SLIDER name="tremolo slider" id="ab64abee7ac8874b" memberName="tremoloSlider"
           virtualName="" explicitFocusOrder="0" pos="632 456 112 24" thumbcol="ff00af00"
           trackcol="7f007f00" textboxtext="ff007f00" textboxbkgd="ff000000"
-          textboxhighlight="ff00af00" min="1" max="4.7999999999999998"
-          int="3.7999999999999998" style="LinearHorizontal" textBoxPos="TextBoxLeft"
+          textboxhighlight="ff00af00" min="1" max="4.7999999999999998224"
+          int="3.7999999999999998224" style="LinearHorizontal" textBoxPos="TextBoxLeft"
           textBoxEditable="1" textBoxWidth="44" textBoxHeight="20" skewFactor="1"/>
   <LABEL name="frequency label" id="134ce8f87da62b88" memberName="frequencyLabel5"
          virtualName="" explicitFocusOrder="0" pos="472 456 152 24" tooltip="OPL global tremolo depth"
