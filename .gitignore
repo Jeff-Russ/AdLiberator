@@ -1,0 +1,11 @@
+Builds
+JuceLibraryCode
+*.txt
+pdf
+*.lnk
+*.zip
+*.sb0
+*.sb2
+*.exe
+*.obj
+Release
