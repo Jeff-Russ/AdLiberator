@@ -49,8 +49,9 @@ typedef unsigned char BYTE;
 typedef uint16_t WORD;
 
 // BOOL  -  A boolean variable
-//          This type is declared in WinDef.h as follows:
-typedef BYTE BOOL;
+//          This type is declared in WinDef.h as typedef BYTE BOOL;
+//          But this produced an error so:
+typedef signed char BOOL;
 
 DWORD GetStdHandle (DWORD handle) { return handle; }
 
