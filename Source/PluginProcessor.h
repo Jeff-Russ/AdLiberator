@@ -16,6 +16,7 @@
 #include "DROMultiplexer.h"
 #include "FloatParameter.h"
 
+using namespace juce;
 
 //==============================================================================
 class AdlibBlasterAudioProcessor  : public AudioProcessor

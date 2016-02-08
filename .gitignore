@@ -1,6 +1,6 @@
 .DS_Store
 Builds
-JuceLibraryCode
+JuceLibraryCode/modules
 *.txt
 pdf
 *.lnk
